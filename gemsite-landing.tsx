@@ -11,71 +11,70 @@ export default function Component() {
 <SiteLayout>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-900 text-white">
-  <div className="container px-4 md:px-6 mx-auto">
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
-      {/* Text Column */}
-      <div className="space-y-8">
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-            Turn your followers into luxury jewelry customers
-          </h1>
-          <p className="text-xl text-indigo-100 leading-relaxed">
-            We give you everything you need to offer a fully branded, made-to-order fine jewelry service.
-            Customers reach out, and we handle the rest—from crafting each piece to delivery and support.
-            You earn 50% from every order. Keep creating your content—no changes needed.
-          </p>
-        </div>
-        <Link href="/get-started">
-          <Button
-            size="lg"
-            className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg my-6"
-          >
-            Get Started
-          </Button>
-        </Link>
-      </div>
-
-      {/* Image Column */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-3xl blur-3xl opacity-20"></div>
-        <div className="relative overflow-hidden rounded-xl shadow-2xl">
-          <img
-            src="/images/yorkparis-hero.jpg"
-            alt="York Paris luxury jewelry showcase"
-            className="w-full h-auto"
-          />
-          {/* Overlays for depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-          <div className="absolute inset-0 shadow-inner"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
-
-          {/* Bottom overlay card */}
-          <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-bold text-slate-900">York Paris</h3>
-                <p className="text-slate-600 text-sm">Made-to-Order Jewelry Service</p>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h1 className="text-5xl font-extrabold tracking-tight leading-tight text-left">
+  <span className="block bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
+    Convert your audience
+  </span>
+  <span className="block text-slate-900">
+    into luxury jewelry clients
+  </span>
+</h1>
+                  <p className="text-xl text-slate-600 leading-relaxed">
+                    We give you everything you need to offer a fully branded, made-to-order fine jewelry service.
+                    Customers reach out, and we handle the rest, from crafting each piece to delivery and support. You
+                    earn 50% from every order.
+                  </p>
+                </div>
+                <Link href="/get-started">
+                  <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 text-lg my-6">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
-              <Link
-                href="https://www.yorkparis.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="sm"
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full"
-                >
-                  Live Demo
-                </Button>
-              </Link>
+
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-3xl blur-3xl opacity-20"></div>
+                <div className="relative overflow-hidden rounded-xl shadow-2xl">
+                  <img
+                    src="/images/yorkparis-hero.jpg"
+                    alt="York Paris luxury jewelry showcase"
+                    className="w-full h-auto"
+                  />
+                  {/* Subtle overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+                  {/* Inner shadow for depth */}
+                  <div className="absolute inset-0 shadow-inner"></div>
+                  {/* Subtle vignette effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
+                  {/* Optional branded overlay */}
+
+                  {/* Bottom overlay card */}
+                  <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg py-2.5 bg-[rgba(255,255,255,0.5)]">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900">York Paris</h3>
+                        <p className="text-slate-600 text-sm">Made to Order Jewelry Service</p>
+                      </div>
+                      <Link href="https://www.yorkparis.com" target="_blank" rel="noopener noreferrer">
+                        <Button
+                          size="sm"
+                          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full"
+                        >
+                          Live Demo
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* Services Section */}
         <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
