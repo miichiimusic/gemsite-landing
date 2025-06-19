@@ -3,117 +3,79 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check, ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { MobileMenu } from "./components/mobile-menu"
+import SiteLayout from "@/components/site-layout"
 
 export default function Component() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <Link href="/" className="flex items-center justify-center gap-2">
-          <span className="font-bold text-2xl">gemsite</span>
-        </Link>
-
-        <div className="hidden md:flex flex-1 justify-center">
-          <nav className="flex gap-6">
-            <Link href="#home" className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800">
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
-            >
-              About
-            </Link>
-            <Link
-              href="/partnership"
-              className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
-            >
-              Partnership
-            </Link>
-            <Link href="/blog" className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800">
-              Blog
-            </Link>
-            <Link
-              href="/contact"
-              className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <Link href="/get-started" className="hidden md:block">
-            <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700 text-white">
-              Get Started
-            </Button>
-          </Link>
-
-          <MobileMenu currentPage="home" />
-        </div>
-      </header>
-
+    
+<SiteLayout>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <div className="space-y-4">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900">
-                    Own your luxury jewelry brand
-                  </h1>
-                  <p className="text-xl text-slate-600 leading-relaxed">
-                    We provide a made-to-order jewelry design service website. No need to change your content, we handle
-                    everything behind the scenes, you earn 50% on every order.
-                  </p>
-                </div>
-                <Link href="/get-started">
-                  <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 text-lg my-6">
-                    Get Started
-                  </Button>
-                </Link>
-              </div>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-900 text-white">
+  <div className="container px-4 md:px-6 mx-auto">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Text Column */}
+      <div className="space-y-8">
+        <div className="space-y-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+            Turn your followers into luxury jewelry customers
+          </h1>
+          <p className="text-xl text-indigo-100 leading-relaxed">
+            We give you everything you need to offer a fully branded, made-to-order fine jewelry service.
+            Customers reach out, and we handle the rest—from crafting each piece to delivery and support.
+            You earn 50% from every order. Keep creating your content—no changes needed.
+          </p>
+        </div>
+        <Link href="/get-started">
+          <Button
+            size="lg"
+            className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg my-6"
+          >
+            Get Started
+          </Button>
+        </Link>
+      </div>
 
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-3xl blur-3xl opacity-20"></div>
-                <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                  <img
-                    src="/images/yorkparis-hero.jpg"
-                    alt="York Paris luxury jewelry showcase"
-                    className="w-full h-auto"
-                  />
-                  {/* Subtle overlay for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-                  {/* Inner shadow for depth */}
-                  <div className="absolute inset-0 shadow-inner"></div>
-                  {/* Subtle vignette effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
-                  {/* Optional branded overlay */}
+      {/* Image Column */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-3xl blur-3xl opacity-20"></div>
+        <div className="relative overflow-hidden rounded-xl shadow-2xl">
+          <img
+            src="/images/yorkparis-hero.jpg"
+            alt="York Paris luxury jewelry showcase"
+            className="w-full h-auto"
+          />
+          {/* Overlays for depth */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 shadow-inner"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
 
-                  {/* Bottom overlay card */}
-                  <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg py-2.5 bg-[rgba(255,255,255,0.5)]">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-xl font-bold text-slate-900">York Paris</h3>
-                        <p className="text-slate-600 text-sm">Made to Order Jewelry Service</p>
-                      </div>
-                      <Link href="https://www.yorkparis.com" target="_blank" rel="noopener noreferrer">
-                        <Button
-                          size="sm"
-                          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full"
-                        >
-                          Live Demo
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+          {/* Bottom overlay card */}
+          <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900">York Paris</h3>
+                <p className="text-slate-600 text-sm">Made-to-Order Jewelry Service</p>
               </div>
+              <Link
+                href="https://www.yorkparis.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="sm"
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full"
+                >
+                  Live Demo
+                </Button>
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Services Section */}
         <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
@@ -128,9 +90,7 @@ export default function Component() {
                     Offer a jewelry design service, without changing your content
                   </h2>
                   <p className="text-lg text-slate-600 leading-relaxed">
-                    We give you everything you need to offer a fully branded, made-to-order fine jewelry service.
-                    Customers reach out, and we handle the rest, from crafting each piece to delivery and support. You
-                    earn 50% from every order.
+                    We provide a made-to-order jewelry design service website. No need to change your content, we handle everything behind the scenes, you earn 50% on every order.
                   </p>
                 </div>
 
@@ -572,22 +532,6 @@ export default function Component() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white">
-        <p className="text-xs text-slate-500">© {new Date().getFullYear()} Gemsite. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4 text-slate-500">
-            Privacy Policy
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4 text-slate-500">
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4 text-slate-500">
-            Contact
-          </Link>
-        </nav>
-      </footer>
-    </div>
-  )
-}
+      </SiteLayout>
+   )
+ }
