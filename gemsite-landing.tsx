@@ -19,12 +19,11 @@ export default function Component() {
           Built for You
         </Badge>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
-          Own your jewelry brand,<br />
-          without the work
+          We create luxury jewelry brands for influencers
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          Offer a made-to-order jewelry design service to your audience. 
-          We handle communication, production and delivery. We split the profits!
+          You can now offer a jewelry design service to your audience. 
+          We handle communication, production and delivery. We split the profits.
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 justify-start md:justify-center items-start md:items-center">

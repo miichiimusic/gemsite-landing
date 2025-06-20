@@ -24,7 +24,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       >
         <div className="container px-4 md:px-6 mx-auto h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center justify-center gap-2">
-            <span className="font-bold text-4xl">gemsite</span>
+            <span className="font-bold text-3xl">gemsite</span>
           </Link>
 
           <div className="hidden md:flex flex-1 justify-center">
