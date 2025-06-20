@@ -1,45 +1,76 @@
-import { ReactNode } from "react"
+"use client"
+import { ReactNode, useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MobileMenu } from "@/components/mobile-menu"
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Header with softer, slightly larger shadow */}
-      <header className="px-4 lg:px-6 h-16 flex items-center justify-between bg-white/80 backdrop-blur-sm shadow-[0_4px_12px_rgba(0,0,0,0.08)] sticky top-0 z-50">
-        <Link href="/" className="flex items-center justify-center gap-2">
-          <span className="font-bold text-3xl">gemsite</span>
-        </Link>
-
-        <div className="hidden md:flex flex-1 justify-center">
-          <nav className="flex gap-6">
-            <Link href="/" className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800">
-              Home
-            </Link>
-            <Link href="/about" className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800">
-              About
-            </Link>
-            <Link href="/partnership" className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800">
-              Partnership
-            </Link>
-            <Link href="/blog" className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800">
-              Blog
-            </Link>
-            <Link href="/contact" className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800">
-              Contact
-            </Link>
-          </nav>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <Link href="/get-started" className="hidden md:block">
-            <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700 text-white">
-              Get Started
-            </Button>
+      {/* Header with dynamic background */}
+      <header
+        className={
+          `sticky top-0 z-50 backdrop-blur-sm transition-colors duration-300 ` +
+          (isScrolled ? "bg-white/80 shadow-lg" : "bg-transparent")
+        }
+      >
+        <div className="container px-4 md:px-6 mx-auto h-16 flex items-center justify-between">
+          <Link href="/" className="flex items-center justify-center gap-2">
+            <span className="font-bold text-4xl">gemsite</span>
           </Link>
 
-          <MobileMenu currentPage="home" />
+          <div className="hidden md:flex flex-1 justify-center">
+            <nav className="flex gap-6">
+              <Link
+                href="/"
+                className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
+              >
+                About
+              </Link>
+              <Link
+                href="/partnership"
+                className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
+              >
+                Partnership
+              </Link>
+              <Link
+                href="/blog"
+                className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                className="font-medium hover:text-indigo-600 transition-colors text-base text-slate-800"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <Link href="/get-started" className="hidden md:block">
+              <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700 text-white">
+                Get Started
+              </Button>
+            </Link>
+
+            <MobileMenu currentPage="home" />
+          </div>
         </div>
       </header>
 
