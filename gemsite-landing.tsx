@@ -61,11 +61,11 @@ export default function Component() {
       <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-xl font-bold text-gray-900">York Paris</h3>
+            <h3 className="text-xl font-bold text-gray-900">Your Brand</h3>
             <p className="text-gray-600 text-sm">Made-to-Order Jewelry Service</p>
           </div>
           <Link
-            href="https://my-website-5qdef9qwn-leonardos-projects-23d528d6.vercel.app"
+            href="https://my-website-delta-five-38.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
           >
