@@ -11,90 +11,72 @@ export default function Component() {
 <SiteLayout>
       <main className="flex-1">
         {/* Hero Section */}
-       <section className="-mt-16 pt-24 md:pt-32 lg:pt-40 w-full bg-white py-12 md:py-24 lg:py-32">
+<section className="w-full pb-8 md:pb-12 lg:pb-16 pt-12 md:pt-24 lg:pt-32">
   <div className="container px-4 md:px-6 mx-auto">
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
-      {/* Text Column */}
-      <div>
-        {/* Heading + Paragraph */}
-        <div className="space-y-4">
-          <h1
-  className="
-    text-5xl md:text-6xl lg:text-7xl
-    font-bold tracking-tight
-    leading-tight md:leading-snug
-    text-left
-  "
->
-  <span className="block text-slate-900">
-    Own your jewelry brand,
-  </span>
-  <span className="block text-slate-900">
-    without the work
-  </span>
-</h1>
-          <p className="text-xl text-gray-700 leading-relaxed">
-            We give you everything you need to offer a fully branded,
-            made-to-order jewelry service. Customers reach out, and we handle
-            the rest—from crafting to delivery and support. You earn 50% on every
-            order. Keep creating your content—no changes needed.
-          </p>
-        </div>
-
-        {/* Button */}
-        <Link href="/get-started" className="mt-4 md:mt-8 inline-block">
-          <Button
-            size="lg"
-            className="
-              bg-indigo-600 hover:bg-indigo-700 
-              text-white 
-              px-8 py-6 text-lg
-            "
-          >
+    <div className="text-left md:text-center space-y-8 max-w-4xl mx-auto">
+      <div className="space-y-4">
+        <Badge variant="outline" className="text-indigo-600 border-indigo-200">
+          Built For You
+        </Badge>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
+          Own your jewelry brand,<br />
+          without the work
+        </h1>
+        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+          We give you everything you need to offer a fully branded, made-to-order jewelry service. Customers reach
+          out, and we handle the rest—from crafting to delivery and support. You earn 50% on every order. Keep
+          creating your content—no changes needed.
+        </p>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-4 justify-start md:justify-center items-start md:items-center">
+        <Link href="/get-started">
+          <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 text-lg">
             Get Started
           </Button>
         </Link>
       </div>
+    </div>
+  </div>
+</section>
 
-      {/* Image Column */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-indigo-200 rounded-3xl blur-3xl opacity-20"></div>
-        <div className="relative overflow-hidden rounded-xl shadow-2xl">
-          <img
-            src="/images/yorkparis-hero.jpg"
-            alt="York Paris luxury jewelry showcase"
-            className="w-full h-auto"
-          />
-          {/* Depth overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
-          <div className="absolute inset-0 shadow-inner" />
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5" />
+{/* Image Below Hero with Overlay Card */}
+<section className="w-full pt-4 md:pt-6 lg:pt-8 pb-12 md:pb-16">
+  <div className="container px-4 md:px-6 mx-auto">
+    <div className="relative overflow-hidden rounded-xl shadow-2xl">
+      {/* Background Glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-indigo-200 rounded-3xl blur-3xl opacity-20"></div>
 
-          {/* Overlay Card */}
-          <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900">York Paris</h3>
-                <p className="text-gray-600 text-sm">Made-to-Order Jewelry Service</p>
-              </div>
-              <Link
-                href="https://www.yorkparis.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="sm"
-                  className="
-                    bg-indigo-600 hover:bg-indigo-700 
-                    text-white 
-                    px-4 py-2 rounded-full
-                  "
-                >
-                  Live Demo
-                </Button>
-              </Link>
-            </div>
+      {/* Main Image */}
+      <img
+        src="/images/yorkparis-hero.jpg"
+        alt="York Paris luxury jewelry showcase"
+        className="w-full h-auto relative"
+      />
+
+      {/* Depth Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 shadow-inner"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
+
+      {/* Overlay Card */}
+      <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-xl font-bold text-gray-900">York Paris</h3>
+            <p className="text-gray-600 text-sm">Made-to-Order Jewelry Service</p>
           </div>
+          <Link
+            href="https://www.yorkparis.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="sm"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full"
+            >
+              Live Demo
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
