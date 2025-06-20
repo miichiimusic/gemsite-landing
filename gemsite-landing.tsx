@@ -39,9 +39,9 @@ export default function Component() {
 </section>
 
 {/* Image Below Hero with Overlay Card */}
-<section className="w-full pt-4 md:pt-6 lg:pt-8 pb-12 md:pb-16">
+<section className="w-full pt-4 md:pt-6 lg:pt-8 pb-8 md:pb-12 lg:pb-16">
   <div className="container px-4 md:px-6 mx-auto">
-    {/* Add aspect-video so the div has height */}
+    {/* Image wrapper */}
     <div className="relative w-full aspect-video overflow-hidden rounded-xl shadow-2xl">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-indigo-200 rounded-3xl blur-3xl opacity-20" />
@@ -61,9 +61,11 @@ export default function Component() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
       <div className="absolute inset-0 shadow-inner" />
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5" />
+    </div>
 
-      {/* Overlay Card */}
-      <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
+    {/* Overlay card pulled up with negative margin */}
+    <div className="-mt-16 md:-mt-20 lg:-mt-24 px-4 md:px-6">
+      <div className="max-w-xl mx-auto backdrop-blur-sm bg-white/50 rounded-2xl p-4 shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-xl font-bold text-gray-900">Your Brand</h3>
