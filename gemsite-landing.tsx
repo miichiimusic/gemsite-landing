@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Check, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import SiteLayout from "@/components/site-layout"
+import Image from "next/image"
 
 export default function Component() {
   return (
@@ -40,21 +41,26 @@ export default function Component() {
 {/* Image Below Hero with Overlay Card */}
 <section className="w-full pt-4 md:pt-6 lg:pt-8 pb-12 md:pb-16">
   <div className="container px-4 md:px-6 mx-auto">
-    <div className="relative overflow-hidden rounded-xl shadow-2xl">
+    {/* Add aspect-video so the div has height */}
+    <div className="relative w-full aspect-video overflow-hidden rounded-xl shadow-2xl">
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-indigo-200 rounded-3xl blur-3xl opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-indigo-200 rounded-3xl blur-3xl opacity-20" />
 
       {/* Main Image */}
-      <img
+      <Image
         src="/images/yorkparis-hero.jpg"
         alt="York Paris luxury jewelry showcase"
-        className="w-full h-auto relative"
+        fill
+        quality={100}
+        priority
+        sizes="100vw"
+        className="object-cover object-top"
       />
 
       {/* Depth Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-      <div className="absolute inset-0 shadow-inner"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 shadow-inner" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5" />
 
       {/* Overlay Card */}
       <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
