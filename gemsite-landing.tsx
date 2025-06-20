@@ -19,27 +19,20 @@ export default function Component() {
         {/* Heading + Paragraph */}
         <div className="space-y-4">
           <h1
-            className="
-              text-5xl md:text-6xl lg:text-7xl 
-              font-extrabold tracking-tight 
-              leading-tight       /* tight on mobile */
-              md:leading-snug     /* a bit more breathing room on tablet+ */
-              text-left
-            "
-          >
-            <span
-              className="
-                block 
-                bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 
-                bg-clip-text text-transparent
-              "
-            >
-              Own your jewelry brand,
-            </span>
-            <span className="block text-gray-900">
-              without the work
-            </span>
-          </h1>
+  className="
+    text-5xl md:text-6xl lg:text-7xl
+    font-extrabold tracking-tight
+    leading-tight md:leading-snug
+    text-left
+  "
+>
+  <span className="block text-slate-900">
+    Own your jewelry brand,
+  </span>
+  <span className="block text-slate-900">
+    without the work
+  </span>
+</h1>
           <p className="text-xl text-gray-700 leading-relaxed">
             We give you everything you need to offer a fully branded,
             made-to-order jewelry service. Customers reach out, and we handle
