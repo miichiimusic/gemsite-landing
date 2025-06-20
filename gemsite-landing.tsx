@@ -34,7 +34,7 @@ export default function Component() {
                 bg-clip-text text-transparent
               "
             >
-              Own your jewelry brand
+              Own your jewelry brand,
             </span>
             <span className="block text-gray-900">
               without the work
