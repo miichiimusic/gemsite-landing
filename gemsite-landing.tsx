@@ -15,12 +15,16 @@ export default function Component() {
   <div className="container px-4 md:px-6 mx-auto">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       {/* Text Column */}
-      <div className="space-y-8">
+      <div>
+        {/* Heading + Paragraph */}
         <div className="space-y-4">
           <h1
             className="
               text-5xl md:text-6xl lg:text-7xl 
-              font-extrabold tracking-tight leading-tight text-left
+              font-extrabold tracking-tight 
+              leading-tight       /* tight on mobile */
+              md:leading-snug     /* a bit more breathing room on tablet+ */
+              text-left
             "
           >
             <span
@@ -30,25 +34,27 @@ export default function Component() {
                 bg-clip-text text-transparent
               "
             >
-              Convert your audience
+              Own your jewelry brand
             </span>
             <span className="block text-gray-900">
-              into luxury clients
+              without the work
             </span>
           </h1>
-
           <p className="text-xl text-gray-700 leading-relaxed">
-            We give you everything you need to offer a fully branded, made-to-order jewelry service.
-            Customers reach out, and we handle the rest—from crafting to delivery and support.
-            You earn 50% on every order. Keep creating your content—no changes needed.
+            We give you everything you need to offer a fully branded,
+            made-to-order jewelry service. Customers reach out, and we handle
+            the rest—from crafting to delivery and support. You earn 50% on every
+            order. Keep creating your content—no changes needed.
           </p>
         </div>
 
-        <Link href="/get-started" className="mt-8 inline-block">
+        {/* Button */}
+        <Link href="/get-started" className="mt-4 md:mt-8 inline-block">
           <Button
             size="lg"
             className="
-              bg-indigo-600 hover:bg-indigo-700 text-white 
+              bg-indigo-600 hover:bg-indigo-700 
+              text-white 
               px-8 py-6 text-lg
             "
           >
@@ -66,11 +72,12 @@ export default function Component() {
             alt="York Paris luxury jewelry showcase"
             className="w-full h-auto"
           />
-          {/* depth overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-          <div className="absolute inset-0 shadow-inner"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
+          {/* Depth overlays */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+          <div className="absolute inset-0 shadow-inner" />
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5" />
 
+          {/* Overlay Card */}
           <div className="absolute bottom-4 left-4 right-4 backdrop-blur-sm rounded-2xl p-4 shadow-lg bg-white/50">
             <div className="flex items-center justify-between">
               <div>
@@ -85,7 +92,8 @@ export default function Component() {
                 <Button
                   size="sm"
                   className="
-                    bg-indigo-600 hover:bg-indigo-700 text-white 
+                    bg-indigo-600 hover:bg-indigo-700 
+                    text-white 
                     px-4 py-2 rounded-full
                   "
                 >
