@@ -16,16 +16,15 @@ export default function Component() {
     <div className="text-left md:text-center space-y-8 max-w-4xl mx-auto">
       <div className="space-y-4">
         <Badge variant="outline" className="text-indigo-600 border-indigo-200">
-          Built For You
+          Built for You
         </Badge>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
           Own your jewelry brand,<br />
           without the work
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          We give you everything you need to offer a fully branded, made-to-order jewelry service. Customers reach
-          out, and we handle the rest—from crafting to delivery and support. You earn 50% on every order. Keep
-          creating your content—no changes needed.
+          Offer a made-to-order jewelry design service to your audience. 
+          We handle communication, production and delivery. We split the profits!
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 justify-start md:justify-center items-start md:items-center">
@@ -66,7 +65,7 @@ export default function Component() {
             <p className="text-gray-600 text-sm">Made-to-Order Jewelry Service</p>
           </div>
           <Link
-            href="https://www.yorkparis.com"
+            href="https://my-website-5qdef9qwn-leonardos-projects-23d528d6.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -93,10 +92,10 @@ export default function Component() {
                     Custom Design Service
                   </Badge>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
-                    Offer a jewelry design service, without changing your content
+                    Promote your jewelry brand without changing your content
                   </h2>
                   <p className="text-lg text-slate-600 leading-relaxed">
-                    We provide a made-to-order jewelry design service website. No need to change your content, we handle everything behind the scenes, you earn 50% on every order.
+                    We provide a made-to-order jewelry design website, just add the link to your bio and effortlessly convert your audience into high-end jewelry customers.
                   </p>
                 </div>
 
