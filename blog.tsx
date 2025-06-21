@@ -38,20 +38,13 @@ export default async function Blog() {
                   key={post.slug}
                   className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div className="aspect-video overflow-hidden rounded-t-lg">
-                    <img
-                      src={post.image || "/placeholder.svg"}
-                      alt={post.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
+              
                   <CardContent className="p-6">
                     <div className="space-y-4">
                       <div className="flex items-center gap-2">
                         <Badge variant="outline" className="text-indigo-600 border-indigo-200">
                           {post.category}
                         </Badge>
-                        <span className="text-sm text-slate-500">{post.readTime}</span>
                       </div>
 
                       <h3 className="text-xl font-semibold text-slate-900 line-clamp-2">{post.title}</h3>
@@ -62,7 +55,6 @@ export default async function Blog() {
                         <div className="flex items-center gap-2">
                           <span className="text-sm text-slate-500">By {post.author}</span>
                           <span className="text-slate-300">•</span>
-                          <span className="text-sm text-slate-500">{post.date}</span>
                         </div>
 
                         <Link href={`/blog/${post.slug}`}> 
