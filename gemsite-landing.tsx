@@ -12,49 +12,25 @@ export default function Component() {
 <SiteLayout>
       <main className="flex-1">
         {/* Hero Section */}
-<section
-  className="
-    -mt-12        /* pull up a bit under header */
-    pt-20         /* extra top padding */
-    md:-mt-16
-    md:pt-24
-    lg:-mt-20
-    lg:pt-28
-    w-full
-    bg-white      /* ← solid white */
-    pb-16 md:pb-20 lg:pb-24
-  "
->
+<section className="w-full pb-8 md:pb-12 lg:pb-16 pt-12 md:pt-24 lg:pt-32">
   <div className="container px-4 md:px-6 mx-auto">
-    <div className="max-w-4xl mx-auto text-left md:text-center space-y-8">
-      <Badge variant="outline" className="uppercase text-indigo-600 border-indigo-200">
-        Built for You
-      </Badge>
-
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-        <span className="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-indigo-800">
-          We create luxury jewelry brands
-        </span>
-        <span className="block text-slate-900">
-          for influencers
-        </span>
-      </h1>
-
-      <p className="mt-4 text-xl text-slate-600 leading-relaxed">
-        Offer a fully branded, made-to-order jewelry service that seamlessly integrates with your content.
-        We handle everything—from communication and production to delivery—while you keep creating and earn
-        50% on every sale.
-      </p>
-
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <div className="text-left md:text-center space-y-8 max-w-4xl mx-auto">
+      <div className="space-y-4">
+        <Badge variant="outline" className="text-indigo-600 border-indigo-200">
+          Built for You
+        </Badge>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
+          We create luxury jewelry brands for influencers
+        </h1>
+        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+          You can now offer a jewelry design service to your audience. 
+          We handle communication, production and delivery. We split the profits.
+        </p>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-4 justify-start md:justify-center items-start md:items-center">
         <Link href="/get-started">
-          <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4">
+          <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-6 text-lg">
             Get Started
-          </Button>
-        </Link>
-        <Link href="/partnership">
-          <Button variant="outline" size="lg" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-8 py-4">
-            Learn More
           </Button>
         </Link>
       </div>
@@ -66,7 +42,6 @@ export default function Component() {
 <section
   className="
     w-full
-    bg-white          /* ← solid white */
     pt-12 pb-16
     md:pt-16 md:pb-20
     lg:pt-20 lg:pb-24
