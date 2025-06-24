@@ -78,7 +78,7 @@ export default function Component() {
             <p className="text-gray-600 text-sm">Made-to-Order Jewelry Service</p>
           </div>
           <Link
-            href="https://my-website-delta-five-38.vercel.app"
+            href="https://live-demo-seven.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
           >
